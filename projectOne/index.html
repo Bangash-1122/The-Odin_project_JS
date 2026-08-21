@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📚 My Library</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>📚 My Library</h1>
+            <button id="newBookBtn" class="btn btn-primary">+ New Book</button>
+        </header>
+
+        <!-- Book Grid -->
+        <div id="libraryDisplay" class="book-grid">
+            <!-- Books will be rendered here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Dialog/Modal for adding new book -->
+    <dialog id="bookDialog" class="dialog">
+        <div class="dialog-content">
+            <h2>Add New Book</h2>
+            <form id="bookForm">
+                <div class="form-group">
+                    <label for="title">Title *</label>
+                    <input type="text" id="title" name="title" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="author">Author *</label>
+                    <input type="text" id="author" name="author" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="pages">Number of Pages *</label>
+                    <input type="number" id="pages" name="pages" min="1" required />
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label for="readStatus">
+                        <input type="checkbox" id="readStatus" name="readStatus" />
+                        I have read this book
+                    </label>
+                </div>
+
+                <div class="dialog-actions">
+                    <button type="button" id="cancelBtn" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Book</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
